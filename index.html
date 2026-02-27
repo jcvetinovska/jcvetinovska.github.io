@@ -1,21 +1,309 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Website</title>
+  <title>Jana Cvetinovska  </title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- MathJax for LaTeX -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
   <style>
+    :root {
+      --primary: #7C6EE6;
+      --light-purple: #EDE9FF;
+      --text: #2B2B2B;
+      --bg: #FFFFFF;
+    }
+
+    body.dark {
+      --primary: #B8A8FF;
+      --light-purple: #2B2545;
+      --text: #F4F2FF;
+      --bg: #141224;
+    }
+
     body {
-      font-family: Arial;
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: all 0.4s ease;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: var(--bg);
+      padding: 15px 0;
       text-align: center;
-      background-color: pink;
-      padding-top: 100px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      z-index: 1000;
     }
+
+    nav a {
+      margin: 0 20px;
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 500;
+    }
+
+    .toggle {
+      cursor: pointer;
+      margin-left: 30px;
+      font-size: 14px;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 120px auto;
+      padding: 0 20px;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     h1 {
-      font-size: 50px;
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      margin-bottom: 10px;
     }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      margin-top: 60px;
+      border-bottom: 2px solid var(--light-purple);
+      padding-bottom: 8px;
+    }
+
+    .highlight-box {
+      background: var(--light-purple);
+      padding: 25px;
+      border-radius: 12px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: var(--light-purple);
+      padding: 20px;
+      border-radius: 12px;
+      margin: 20px 0;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+
+
+.profile-pic {
+  width: 260px;              /* rectangular */
+  height: 320px;
+  object-fit: cover;
+  border-radius: 8px;        /* rectangular, slightly soft corners */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.contact-box {
+  background: var(--light-purple);
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.contact-box a {
+  color: var(--primary);
+  text-decoration: none;
+
+}
+
+.home-container {
+  display: flex;
+  align-items: flex-start;   /* aligns photo with top of name */
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.home-text {
+  flex: 1;
+}
+
+.home-photo img {
+  width: 260px;              /* rectangular */
+  height: 320px;
+  object-fit: cover;
+  border-radius: 8px;        /* rectangular, slightly soft corners */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
   </style>
 </head>
+
 <body>
-  <h1>Welcome to My Website 💖</h1>
-  <p>I built this using GitHub Pages!</p>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#research">Research</a>
+  <a href="#teaching">Teaching</a>
+  <a href="#bio">Bio</a>
+  <span class="toggle" onclick="toggleDark()">🌙 Toggle Dark</span>
+</nav>
+
+<section id="home">
+  <div class="home-container">
+
+    <div class="home-text">
+      <h1>Jana Cvetinovska</h1>
+      <p style="color: var(--primary); font-weight: 500;">
+        PhD Student – University of St. Gallen
+      </p>
+        <div class="home-photo">
+      <img src="your-photo.jpg" alt="Jana Cvetinovska">
+    </div>
+
+      <div class="highlight-box">
+        I work on stochastic optimization and control under distributional uncertainty, with particular emphasis on Markov decision processes and dynamic programming.
+My research examines structural properties, duality formulations, and computational methods for optimal policies in sequential decision-making problems.
+      </div>
+
+      <p style="margin-top:20px;">
+        📧 <a href="mailto:jana.cvetinovska@student.unisg.ch">jana.cvetinovska@student.unisg.ch</a><br>
+        🎓 <a href="https://scholar.google.com/" target="_blank">Google Scholar</a>
+      </p>
+    </div>
+
+  
+
+  </div>
+</section>
+
+<section id="home">
+  <div class="home-container">
+
+    <div class="home-text">
+      <h1>Jana Cvetinovska</h1>
+
+      <p style="color: var(--primary); font-weight: 500;">
+        PhD Student – University of St. Gallen
+      </p>
+
+      <p>
+        I work on stochastic optimization and control under distributional uncertainty, with particular emphasis on Markov decision processes and dynamic programming.
+        My research examines structural properties, duality formulations, and computational methods for optimal policies in sequential decision-making problems.
+      </p>
+
+      <p style="margin-top:20px;">
+        📧 <a href="mailto:jana.cvetinovska@student.unisg.ch">jana.cvetinovska@student.unisg.ch</a><br>
+        🎓 <a href="https://scholar.google.com/" target="_blank">Google Scholar</a>
+      </p>
+    </div>
+
+    <div class="home-photo">
+      <img src="your-photo.jpg" alt="Jana Cvetinovska">
+    </div>
+
+  </div>
+</section>
+<!--
+  <p>
+    Example equation:
+    $$ V^*(x) = \min_{a \in \mathcal{A}} \left\{ c(x,a) + \gamma \mathbb{E}[V^*(X') | x,a] \right\} $$
+  </p>
+-->
+
+
+<section id="research">
+  <h2>Research</h2>
+
+  <!--
+  <div class="card">
+    <strong>Title</strong>
+    <p>
+      Desc
+    </p>
+    <button>Read Paper</button>
+  </div>
+
+  <div class="card">
+    <strong>Title</strong>
+    <p>
+      Desc
+    </p>
+    <button>Preprint</button>
+  </div>
+-->
+  <div class="card">
+    <strong>Coming Soon</strong>
+  </div>
+
+</section>
+
+<section id="teaching">
+  <h2>Teaching</h2>
+  
+    <ul>
+      <li>Statistics (Bachelor) - Fall 26/27</li>
+      <li>Data Analytics I - Fall 26/27 </li>
+    </ul>
+  
+</section>
+
+<section id="bio">
+  <h2>Bio</h2>
+  <p>
+  Jana Cvetinovska is a PhD student at the University of St. Gallen 
+  specializing in stochastic optimization, decision theory, and control 
+  under uncertainty. Her research lies in distributionally robust optimization, convex duality, 
+  and measure-theoretic probability, with applications to dynamic programming and Markov decision processes. 
+
+  She previously obtained a Master’s degree in Quantitative Economics and Finance at the University of St. Gallen and a 
+  Bachelor’s degree in Computer Science at Bocconi University.
+ 
+  </p>
+</section>
+
+<script>
+  function toggleDark() {
+    document.body.classList.toggle("dark");
+  }
+
+  const sections = document.querySelectorAll("section");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add("visible");
+      }
+    });
+  });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+</script>
+
 </body>
 </html>
